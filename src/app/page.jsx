@@ -181,7 +181,7 @@ function Resume() {
       company: 'Rocke',
       title: 'CEO',
       logo: logoRocke,
-      start: '2024',
+      start: '2022',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
