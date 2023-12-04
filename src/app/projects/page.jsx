@@ -11,10 +11,10 @@ import logoBloc from '@/images/logos/bloc.png'
 
 const projects = [
   {
-    name: 'Rocke',
+    name: 'Rocke Software',
     description:
       'Provides custom enterprise and web based applications for internal and commercial use.',
-    link: { href: 'https://github.com/Charles-Rocke/.co', label: 'github.com' },
+    link: { href: 'https://rocke.so', label: 'rocke.so' },
     logo: logoRocke,
   },
   {
@@ -100,7 +100,7 @@ export default function Projects() {
         <div class="... absolute inset-x-0 bottom-0 h-16">08</div>
       </div> */}
 
-      <Newsletter />
+      {/* <Newsletter /> */}
     </SimpleLayout>
   )
 }

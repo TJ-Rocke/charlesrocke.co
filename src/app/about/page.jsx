@@ -58,8 +58,8 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-zinc-800 dark:text-zinc-100 text-4xl font-bold tracking-tight sm:text-5xl">
-            I’m Charles.
-            <br />I live in Maryland, where I design better ways of living.
+            What's up I’m Charles,
+            <br />a Marylander spending way too much time on my computer.
           </h1>
           <div className="text-zinc-600 dark:text-zinc-400 mt-6 space-y-7 text-base">
             <p>
@@ -119,11 +119,11 @@ export default function About() {
               Follow on LinkedIn
             </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
+              href="mailto:charles@rocke.so"
               icon={MailIcon}
               className="border-zinc-100 dark:border-zinc-700/40 mt-8 border-t pt-8"
             >
-              charles@charlesrocke.co
+              charles@rocke.so
             </SocialLink>
           </ul>
         </div>
