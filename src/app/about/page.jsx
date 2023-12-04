@@ -39,7 +39,7 @@ function MailIcon(props) {
 export const metadata = {
   title: 'About',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'What’s up I’m Charles, a Marylander spending way too much time on my computer.',
 }
 
 export default function About() {
