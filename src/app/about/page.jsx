@@ -62,8 +62,7 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I never understood why I could never fit in at a young age. My
-              escape was always to video games where I could determine my own
+              My escape was always to video games where I could determine my own
               way of doing things. From video games, I was led to study Computer
               Science in college. After a semester, I couldn&apos;t piece things
               together or understand the big picture behind it. I switched my
