@@ -99,7 +99,7 @@ function Article({ article }) {
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
-      <Icon className="fill-zinc-500 group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300 h-6 w-6 transition" />
+      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
     </Link>
   )
 }
@@ -108,13 +108,13 @@ export function Newsletter() {
   return (
     <form
       action="/thank-you"
-      className="border-zinc-100 dark:border-zinc-700/40 rounded-2xl border p-6"
+      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
-      <h2 className="text-zinc-900 dark:text-zinc-100 flex text-sm font-semibold">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <MailIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Feel free to reach out</span>
       </h2>
-      <p className="text-zinc-600 dark:text-zinc-400 mt-2 text-sm">
+      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
         If you see something that piques your interest, leave your email below.
       </p>
       <div className="mt-6 flex">
@@ -123,7 +123,7 @@ export function Newsletter() {
           placeholder="Email address"
           aria-label="Email address"
           required
-          className="focus:border-sky-500 focus:ring-sky-500/10 border-zinc-900/10 bg-white shadow-zinc-800/5 placeholder:text-zinc-400 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-sky-400 dark:focus:ring-sky-400/10 min-w-0 flex-auto appearance-none rounded-md border px-3 py-[calc(theme(spacing.2)-1px)] shadow-md focus:outline-none focus:ring-4 sm:text-sm"
+          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-sky-400 dark:focus:ring-sky-400/10 sm:text-sm"
         />
         <Button type="submit" className="ml-4 flex-none">
           Say Hey &rarr;
@@ -144,7 +144,7 @@ function Role({ role }) {
 
   return (
     <li className="flex gap-4">
-      <div className="shadow-zinc-800/5 ring-zinc-900/5 dark:border-zinc-700/50 dark:bg-zinc-800 relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md ring-1 dark:border dark:ring-0">
+      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
         <Image
           src={role.logo}
           alt=""
@@ -154,16 +154,16 @@ function Role({ role }) {
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
-        <dd className="text-zinc-900 dark:text-zinc-100 w-full flex-none text-sm font-medium">
+        <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
           {role.company}
         </dd>
         <dt className="sr-only">Role</dt>
-        <dd className="text-zinc-500 dark:text-zinc-400 text-xs">
+        <dd className="text-xs text-zinc-500 dark:text-zinc-400">
           {role.title}
         </dd>
         <dt className="sr-only">Date</dt>
         <dd
-          className="text-zinc-400 dark:text-zinc-500 ml-auto text-xs"
+          className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
           aria-label={`${startLabel} until ${endLabel}`}
         >
           <time dateTime={startDate}>{startLabel}</time>{' '}
@@ -189,6 +189,20 @@ function Resume() {
     },
     {
       company: 'Amazon',
+      title: 'Shift Supervisor',
+      logo: logoAmazon,
+      start: '2024',
+      end: 'Present',
+    },
+    {
+      company: 'Amazon',
+      title: 'Driver Trainer',
+      logo: logoAmazon,
+      start: '2023',
+      end: '2024',
+    },
+    {
+      company: 'Amazon',
       title: 'Learning Ambassador',
       logo: logoAmazon,
       start: '2020',
@@ -201,25 +215,11 @@ function Resume() {
       start: '2019',
       end: '2020',
     },
-    {
-      company: 'Bed Bath & Beyond',
-      title: 'Sales Associate',
-      logo: logoBedBathBeyond,
-      start: '2018',
-      end: '2020',
-    },
-    {
-      company: 'Panera Bread',
-      title: 'Dish Washer',
-      logo: logoPanera,
-      start: '2018',
-      end: '2020',
-    },
   ]
 
   return (
-    <div className="border-zinc-100 dark:border-zinc-700/40 rounded-2xl border p-6">
-      <h2 className="text-zinc-900 dark:text-zinc-100 flex text-sm font-semibold">
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Work</span>
       </h2>
@@ -246,7 +246,7 @@ function Photos() {
           <div
             key={image.src}
             className={clsx(
-              'bg-zinc-100 dark:bg-zinc-800 relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl',
+              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
               rotations[imageIndex % rotations.length],
             )}
           >
@@ -270,13 +270,12 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="text-zinc-800 dark:text-zinc-100 text-4xl font-bold tracking-tight sm:text-5xl">
-            Software designer, founder, and amateur wrestler.
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            Software Developer & Founder
           </h1>
-          <p className="text-zinc-600 dark:text-zinc-400 mt-6 text-base">
-            I’m Charles, a software designer and entrepreneur based in Maryland.
-            I’m the founder and CEO of Rocke, where we develop software
-            applications for individuals and enterprises.
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            I’m Thomas, a software developer and entrepreneur based in Maryland.
+            I’m the founder of Rocke Software, a software development firm.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink

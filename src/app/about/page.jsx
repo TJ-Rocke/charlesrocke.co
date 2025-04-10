@@ -16,9 +16,9 @@ function SocialLink({ className, href, children, icon: Icon }) {
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
-        className="text-zinc-800 hover:text-sky-500 dark:text-zinc-200 dark:hover:text-sky-500 group flex text-sm font-medium transition"
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-sky-500 dark:text-zinc-200 dark:hover:text-sky-500"
       >
-        <Icon className="fill-zinc-500 group-hover:fill-sky-500 h-6 w-6 flex-none transition" />
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-sky-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -39,7 +39,7 @@ function MailIcon(props) {
 export const metadata = {
   title: 'About',
   description:
-    "What’s up I’m Charles, a Marylander spending way too much time on my computer.",
+    'What’s up I’m Charles, a Marylander spending way too much time on my computer.',
 }
 
 export default function About() {
@@ -52,34 +52,32 @@ export default function About() {
               src={portraitImage}
               alt=""
               sizes="(min-width: 1024px) 32rem, 20rem"
-              className="bg-zinc-100 dark:bg-zinc-800 aspect-square rotate-3 rounded-2xl object-cover"
+              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
             />
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-zinc-800 dark:text-zinc-100 text-4xl font-bold tracking-tight sm:text-5xl">
-            What’s up I’m Charles,
-            <br />a Marylander spending way too much time on my computer.
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            What’s up, I’m Thomas
           </h1>
-          <div className="text-zinc-600 dark:text-zinc-400 mt-6 space-y-7 text-base">
+          <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
               I never understood why I could never fit in at a young age. My
-              escape was always to virtual realities where I could determine my
-              own way of doing things. Encapsulated by these realities, I was
-              led to study Computer Science in college. After a semester, I
-              couldn&apos;t piece things together or understand the big picture
-              behind it. I switched my major to Business Administration and did
-              very well. Out of youthful arrogance, I dropped out. I was
-              determined to build my own large company without any real plan or
-              vision.
+              escape was always to video games where I could determine my own
+              way of doing things. From video games, I was led to study Computer
+              Science in college. After a semester, I couldn&apos;t piece things
+              together or understand the big picture behind it. I switched my
+              major to Business Administration and did very well. Out of
+              youthful arrogance, I dropped out. I was determined to build my
+              own large company without any real plan or vision.
             </p>
             <p>
               A few years later, I watched the movie, &ldquo;The Social
-              Network&ldquo;, and Immediately pieced things together. I built my
+              Network&ldquo;, and immediately pieced things together. I built my
               first application called &ldquo;<em>B.A.</em>&ldquo;, a twitter
               for billionaires, and was hooked. I spent almost all of my free
-              time learing how to build applications, web and mobile, but took a
-              stronger liking to web applications. Outside of computers,
+              time learning how to build applications, web and mobile, but took
+              a stronger liking to web applications. Outside of computers,
               I&apos;ve wrestled for 10+ years, love to read, and love going to
               the gym.
             </p>
@@ -87,43 +85,42 @@ export default function About() {
               I won many tournaments and was ranked top 10 in the state of
               Maryland for 2 consecutive years. The number one thing I learned
               from wrestling is discipline. I was the least disciplined among my
-              teamates, always overeating, but surprisingly only ever missed
+              teammates, always overeating, but surprisingly only ever missed
               weight once. I can still hear Coach Tom anytime I get in a
               difficult situation in life. He had a great impact on my life, who
               I am, and how I view myself. I owe much of who I am becoming to
               him.
             </p>
             <p>
-              Today, I’m the founder of <em>Rocke</em>, where we&apos;re working
-              on a variety of custom applications aimed to be spun off as
-              independent products and services. Some products and services
-              we&apos;ve built have helped teams of different types in companies
-              like Amazon and Cisco.
+              Today, I’m the founder of <em>Rocke</em>, a hacker house, where a
+              variety of custom applications are developed and aimed to be spun
+              off as startups. Some products and services that have been built
+              have helped teams of different types in companies like Amazon.
             </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
             <SocialLink
-              href="https://github.com/Charles-Rocke"
+              href="https://github.com/TJ-Rocke"
               icon={GitHubIcon}
               className="mt-4"
             >
               Follow on GitHub
             </SocialLink>
             <SocialLink
-              href="https://www.linkedin.com/in/charles-rocke-716bb71ab/"
+              href="https://www.linkedin.com/in/thomas-rocke-716bb71ab/"
               icon={LinkedInIcon}
               className="mt-4"
             >
               Follow on LinkedIn
             </SocialLink>
             <SocialLink
-              href="mailto:charles@rocke.so"
+              href="mailto:tjrocke365@gmail.com"
               icon={MailIcon}
-              className="border-zinc-100 dark:border-zinc-700/40 mt-8 border-t pt-8"
+              className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              charles@rocke.so
+              tjrocke365@gmail.com
             </SocialLink>
           </ul>
         </div>
